@@ -19,6 +19,12 @@ h1 {
     color: steelblue;
 }
 
+main {
+    padding: 2rem 0;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 main img {
     width: 150px;
     height: auto;
@@ -26,14 +32,11 @@ main img {
     padding: 2px;
     box-shadow: 0 0 30px gray;
     float: right;
+    margin-left: .25rem;
 }
 
-p {
-    padding: 10px;
-}
-
-main {
-    max-width: 840px;
+main p {
+    padding: 1rem 0;
 }
 
 aside {
@@ -51,7 +54,7 @@ aside h2 {
     position: absolute;
     top: 30px;
     left: 50%;
-    translate: -50%;
+    transform: translateX(-50%);
     color: white;
     text-shadow: 2px 2px 2px black;
 }
