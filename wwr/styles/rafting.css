@@ -11,14 +11,15 @@
     --paragraph-font: 'Open Sans', sans-serif;
 
     /*navigation colors */
-    --nav-background-color: #f9f9f9ff;
     --nav-link-color: #5aa9e6ff;
     --nav-hover-link-color: #7fc8f8ff;
-    --nav-hover-background-color: #f9f9f9ff;
+    --nav-hover-background-color: #ffe45eff;
 
     /* shadows */
 
     --text-shadow: 2px 2px 2px black;
+    --box-shadow: 5px 3px 2px rgba(0, 0, 0, 0.40);
+    --box-shadow-header: 0px 3px 2px rgba(0, 0, 0, 0.40);
 }
 
 * {
@@ -32,6 +33,7 @@ body {
     max-width: 960px;
     padding: 20px;
     margin: 0 auto;
+
 }
 
 h1,
@@ -42,7 +44,8 @@ h5,
 h6 {
     font-family: var(--heading-font);
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--accent2-color);
+    text-shadow: var(--text-shadow);
 }
 
 a {
@@ -51,17 +54,25 @@ a {
 
 header {
     background-color: var(--accent1-color);
-    padding: 20px;
-    display: flex;
+    padding: .5rem 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     width: 100%;
+    margin-bottom: .5rem;
+    box-shadow: var(--box-shadow-header);
+}
+
+header img {
+    border-radius: 100%;
+    box-shadow: var(--box-shadow);
 }
 
 p {
     padding: 25px;
 }
 
-nav {
+header nav {
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
 
@@ -79,30 +90,42 @@ nav a:visited {
 }
 
 nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-background-color);
+}
+
+footer {
+    background-color: var(--accent1-color);
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* class selectors */
 
-.header_nav{
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
+.container {
+    /* background-color: var(--secondary-color); */
+    padding: 0;
+    background: linear-gradient(180deg, rgba(90, 169, 230, 1) 0%, rgba(127, 200, 248, 1) 100%);
 }
 
-.hero{
+.header_nav {
+    display: flex;
+}
+
+.hero {
     width: 100%;
     position: relative;
 }
 
-.hero img{
+.hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hero h1{
+.hero h1 {
     position: absolute;
     top: 2rem;
     left: 50%;
@@ -111,25 +134,100 @@ nav a:hover {
     text-shadow: var(--text-shadow);
     font-size: 3rem;
     text-align: center;
-     
 }
 
-.hero article{
+.hero article {
     position: absolute;
-    bottom: 80px;
+    bottom: 20px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.645);
-    padding: 1rem 1rem 0 1rem;
+    padding-block: 1rem;
 }
 
-.hero article img{
-     width: 220px; 
-     height: auto;
-     float: right;
+.hero article img {
+    width: 220px;
+    height: auto;
+    float: right;
 }
 
-.hero article p{
+.hero article p {
     font-size: 1.2rem;
     margin-right: .5rem;
+    font-weight: 500;
+}
+
+/* history styles */
+.history {
+    display: flex;
+}
+
+.history img {
+    filter: contrast(1.2) saturate(1.4);
+    box-shadow: var(--box-shadow);
+}
+
+.history_content {
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.history_content h2 {
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+}
+
+.history_content p {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+}
+
+/* adventures styles */
+
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+    padding-block-end: 1rem;
+    padding-inline: 1rem;
+    background-color: var(--primary-color);
+}
+
+.adventures h2 {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    grid-column: span 5;
+    text-align: center;
+    background-color: var(--secondary-color);
+    text-shadow: var(--text-shadow);
+}
+
+.adventures figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: var(--box-shadow);
+}
+
+.adventures img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adventures figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.645);
+    padding: .6rem;
+    text-align: center;
     font-weight: 500;
 }
