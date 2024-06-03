@@ -334,6 +334,7 @@ button {
     height: 100%;
     border-radius: 0 .4rem .4rem 0;
     box-shadow: var(--box-shadow);
+    border: none;
 }
 
 .employee_profiles {
