@@ -101,7 +101,9 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
+footer a{
+    color: black;
+}
 /* class selectors */
 
 .container {
@@ -222,6 +224,166 @@ footer {
 }
 
 .adventures figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.645);
+    padding: .6rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Contact */
+main>h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    color: var(--accent2-color);
+    text-shadow: var(--text-shadow);
+
+}
+main > p {
+    font-size: 1.2rem;
+    padding-inline: 4rem;
+    text-align: justify;
+    color: var(--accent1-color);
+}
+address {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+}
+
+form>h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: var(--text-shadow);
+}
+
+.form_map_container {
+    display: flex;
+    padding: 2rem;
+    height: 660px;
+}
+
+.form_map_container form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-right: none;
+    border-radius: .3rem 0 0 .3rem;
+    background-image: url('../images/history.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--accent1-color);
+    text-shadow: var(--text-shadow);
+    font-weight: 500;
+
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    height: 2.3rem;
+    border-radius: .3rem;
+    border: none;
+    outline: none;
+    margin-bottom: .5rem;
+    box-shadow: var(--box-shadow);
+    padding-inline: .5rem;
+    margin-top: .2rem;
+    resize: none;
+}
+
+textarea {
+    height: 5rem;
+    padding-block: .5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+label:has(input[type="radio"]),
+label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    padding-block: .5rem;
+}
+
+button {
+    padding-block: .4rem;
+    font-size: 18px;
+    margin-inline: 2rem;
+    background-color: var(--accent2-color);
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.form_map_container iframe {
+    width: 40%;
+    height: 100%;
+    border-radius: 0 .4rem .4rem 0;
+    box-shadow: var(--box-shadow);
+}
+
+.employee_profiles {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.employee_profiles h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-block-end: 2rem;
+    color: var(--accent2-color);
+}
+.address,
+.phone,
+.mail,
+.mail a {
+    text-align: center;
+    color: var(--accent1-color);
+    font-size: 1.1rem;
+}
+
+.employee_profiles {
+    width: 100%;
+    padding-block: 2rem;
+    background-color: var(--primary-color);
+}
+
+.employee_profiles figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    height: 280px;
+    width: 240px;
+}
+
+.employee_profiles img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee_profiles figure:nth-child(1) img {
+    object-position: right;
+}
+
+.employee_profiles figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
