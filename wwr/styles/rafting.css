@@ -16,10 +16,10 @@
     --nav-hover-background-color: #ffe45eff;
 
     /* shadows */
-
     --text-shadow: 2px 2px 2px black;
     --box-shadow: 5px 3px 2px rgba(0, 0, 0, 0.40);
     --box-shadow-header: 0px 3px 2px rgba(0, 0, 0, 0.40);
+    --drop-shadow: drop-shadow(2px 2px 2px black);
 }
 
 * {
@@ -59,7 +59,7 @@ header {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     width: 100%;
-    margin-bottom: .5rem;
+    /* margin-bottom: .5rem; */
     box-shadow: var(--box-shadow-header);
 }
 
@@ -101,15 +101,16 @@ footer {
     align-items: center;
     justify-content: center;
 }
-footer a{
+
+footer a {
     color: black;
 }
+
 /* class selectors */
 
 .container {
-    /* background-color: var(--secondary-color); */
+    background-color: var(--secondary-color);
     padding: 0;
-    background: linear-gradient(180deg, rgba(90, 169, 230, 1) 0%, rgba(127, 200, 248, 1) 100%);
 }
 
 .header_nav {
@@ -121,13 +122,15 @@ footer a{
     position: relative;
 }
 
-.hero img {
+.hero img,
+.trips_hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hero h1 {
+.hero h1,
+.trips_hero h1 {
     position: absolute;
     top: 2rem;
     left: 50%;
@@ -243,12 +246,14 @@ main>h1 {
     text-shadow: var(--text-shadow);
 
 }
-main > p {
+
+main>p {
     font-size: 1.2rem;
     padding-inline: 4rem;
     text-align: justify;
     color: var(--accent1-color);
 }
+
 address {
     display: flex;
     justify-content: space-evenly;
@@ -342,6 +347,7 @@ button {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .employee_profiles h2 {
     width: 100%;
     text-align: center;
@@ -349,6 +355,7 @@ button {
     padding-block-end: 2rem;
     color: var(--accent2-color);
 }
+
 .address,
 .phone,
 .mail,
@@ -393,4 +400,242 @@ button {
     padding: .6rem;
     text-align: center;
     font-weight: 500;
+}
+
+.trips_hero {
+    position: relative;
+    height: 55vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trips_hero img {
+    filter: brightness(89%) saturate(1.4);
+}
+
+.trips_hero p {
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.645);
+    padding-block: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.trips_hero>.cta {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    height: fit-content;
+    text-align: center;
+}
+
+.trips_hero>.cta h2 {
+    font-size: 1.5rem;
+    color: var(--accent2-color);
+    text-shadow: var(--text-shadow);
+    padding-block: 1rem;
+}
+
+ 
+
+.trips {
+    padding-block: 2rem;
+}
+
+.trips h2 {
+    font-size: 2.8rem;
+    padding: 1rem;
+    grid-column: span 5;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+
+.trip>h3 {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    grid-column: span 5;
+    text-align: center;
+    background-color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+}
+
+.trip>.images {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+    padding-block: 2rem;
+
+}
+
+.trip>.images img {
+    box-shadow: var(--box-shadow);
+}
+
+.trip>p {
+    font-size: 1.2rem;
+    padding-inline: 3rem;
+    text-align: justify;
+    background-color: var(--primary-color);
+}
+
+.trip a,
+.home_hero a,
+.home_cta a, 
+.cta a {
+    padding: .4rem 1.5rem;
+    background-color: var(--accent2-color);
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+    display: block;
+    width: 30%;
+    margin-inline: auto;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 240px;
+}
+
+.trip:nth-child(1) img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+
+.home_hero {
+    position: relative;
+    height: 55vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/rafting5_1024.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+.home_hero h1 {
+    font-size: 4rem;
+    color: var(--accent2-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    filter: var(--drop-shadow);
+}
+
+.home_hero p,
+.home_cta p {
+    font-size: 1.7rem;
+    color: var(--accent1-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    padding-inline: 16rem;
+    filter: var(--drop-shadow);
+}
+
+ 
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    padding-block: 1rem;
+    text-align: center;
+    color: var(--accent2-color);
+    text-shadow: var(--text-shadow);
+    filter: var(--drop-shadow) brightness(1.1);
+
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.newsletter form>input {
+    width: 340px;
+}
+
+.newsletter p {
+    padding: 0;
+    font-size: 1.2rem;
+    padding-block: 1rem;
+}
+
+.newsletter button {
+    width: 200px;
+    margin: 0;
+}
+
+.home_cta {
+    display: flex;
+    flex-direction: column;
+    padding-block: 2rem;
+    background-color: var(--primary-color);
+}
+
+.home_cta h2 {
+    font-size: 2.5rem;
+    padding-block: 1rem;
+    text-align: center;
+    color: var(--accent2-color);
+    text-shadow: var(--text-shadow);
+}
+
+.home_cta p{
+    filter: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    ;
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+    padding: 3rem 1rem;
+}
+
+.grid img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow);
+}
+
+.grid h3 {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    grid-column: span 5;
+    text-align: center;
+    background-color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+}
+
+.grid_item p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: justify;
 }
